@@ -29,3 +29,14 @@ then
 else
         echo no
 fi
+
+read -p "Enter mobile number with country code: " mobileNumber
+mobileNumberPattern="^[1-9]+[0-9]+[\ ]+[7-9]{1}[0-9]{9}$"
+if [[ $mobileNumber =~ $mobileNumberPattern ]]
+then
+        echo "Mobile number is valid"
+else
+        echo "Invalid mobile number"
+fi
+
+
