@@ -20,3 +20,12 @@ else
         echo "Last name is not Valid"
 fi
 
+emailPattern="^[0-9a-zA-Z]+([._+-][0-9a-zA-Z]+)*@[0-9a-zA-Z]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2,3})$"
+echo "Enter your Email-id: "
+read email
+if [[ $email =~ $emailPattern ]]
+then
+        echo yes
+else
+        echo no
+fi
